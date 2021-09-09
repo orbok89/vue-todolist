@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root" class="container">
+        <div class="resize">
+            <img  src="https://www.boolean.careers/images/misc/logo.png" alt="Logo Boolean">
+        </div>
+        <div>
+            <input v-model="nuovo_todo" type="text" placeholder="cose da fare" @keyUp.enter="aggiungi">
+        <button type="button" @click="aggiungi">aggiungi</button>
+        <div v-for =" (value, index) in vettore_todo">
+            {{value.to_do}}
+             <i class="fas fa-skull-crossbones" @click="rimuovi(index)"></i>
+             </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
